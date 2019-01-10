@@ -28,7 +28,7 @@ const uint8_t  ZAWY_DIFFICULTY_BLOCK_VERSION			= 0;
 const size_t   CRYPTONOTE_REWARD_BLOCKS_WINDOW			= 100;
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE	= 100000; // size of block (bytes): after which reward is calculated using block size
 const size_t   CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE		= 600;
-const size_t   CRYPTONOTE_DISPLAY_DECIMAL_POINT			= 6;
+const size_t   CRYPTONOTE_DISPLAY_DECIMAL_POINT			= 8;
 
 // COIN - number of smallest units in one coin
 const uint64_t POINT						= UINT64_C(1000);     // pow(10, 3)
@@ -38,7 +38,7 @@ const uint64_t MINIMUM_FEE_V1					= UINT64_C(100);       // fee increase
 const uint64_t MINIMUM_FEE_BANKING					= UINT64_C(1000);       // fee increase 
 const uint64_t DEFAULT_DUST_THRESHOLD				= UINT64_C(10);       // pow(10, 1)
 
-const uint64_t DIFFICULTY_TARGET				= 120; // seconds = 2m
+const uint64_t DIFFICULTY_TARGET				= 140; // seconds = 2.20m
 const uint64_t EXPECTED_NUMBER_OF_BLOCKS_PER_DAY		= 24 * 60 * 60 / DIFFICULTY_TARGET;
 const size_t   DIFFICULTY_WINDOW				= EXPECTED_NUMBER_OF_BLOCKS_PER_DAY; // blocks
 const size_t   DIFFICULTY_WINDOW_V1				= DIFFICULTY_WINDOW;
