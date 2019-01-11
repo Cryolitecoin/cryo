@@ -113,13 +113,13 @@ const char     MINER_CONFIG_FILE_NAME[]                      	= "miner_conf.json
 
 } // parameters
 
-const uint64_t START_BLOCK_REWARD				= (UINT64_C(5000000) * parameters::POINT); // start reward
+const uint64_t START_BLOCK_REWARD				= (UINT64_C(20000000) * parameters::POINT); // start reward
 const uint64_t FOUNDATION_TRUST					= (UINT64_C(400000000) * parameters::COIN); // locked funds to secure network
-const uint64_t MAX_BLOCK_REWARD					= (UINT64_C(20000000) * parameters::COIN); // max reward
+const uint64_t MAX_BLOCK_REWARD					= (UINT64_C(20) * parameters::COIN); // max reward
 const uint64_t REWARD_INCREASE_INTERVAL				= (UINT64_C(22900)); // aprox. 1 month (+ 0.25 increment per month)
 
 const char     CRYPTONOTE_NAME[]                             	= "cryofast";
-const char     GENESIS_COINBASE_TX_HEX[]			= "010a01ff000180e497d012029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101a67e1866fa19d626ab3127c4a243b603dab8c6b8a6800970f7328d4c2dba2793";
+const char     GENESIS_COINBASE_TX_HEX[]			= "";
 const uint32_t GENESIS_NONCE                         	        = 10000;
 const uint64_t GENESIS_TIMESTAMP				= 1527078920;
 
