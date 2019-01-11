@@ -119,7 +119,7 @@ const uint64_t MAX_BLOCK_REWARD					= (UINT64_C(200000) * parameters::COIN); // 
 const uint64_t REWARD_INCREASE_INTERVAL				= (UINT64_C(22900)); // aprox. 1 month (+ 0.25 increment per month)
 
 const char     CRYPTONOTE_NAME[]                             	= "cryofast";
-const char     GENESIS_COINBASE_TX_HEX[]			= "010a01ff000180e1eb17029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd08807121018cb21890e4fd756a64434fe9b73e6f2281e4ee67e0d288777b31c5fdf4a44984"";
+const char     GENESIS_COINBASE_TX_HEX[]			= "010a01ff000180e1eb17029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd08807121018cb21890e4fd756a64434fe9b73e6f2281e4ee67e0d288777b31c5fdf4a44984";
 const uint32_t GENESIS_NONCE                         	        = 10000;
 const uint64_t GENESIS_TIMESTAMP				= 1527078920;
 
