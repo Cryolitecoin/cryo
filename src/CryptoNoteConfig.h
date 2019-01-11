@@ -19,7 +19,7 @@ const uint64_t CRYPTONOTE_DEFAULT_TX_SPENDABLE_AGE		= 10; // 20m unlock
 const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW		= 30;
 const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW_V1		= 11; // LWMA3
 
-const uint64_t MONEY_SUPPLY					= UINT64_C(200000000000000); // max supply: 200M 
+const uint64_t MONEY_SUPPLY					= UINT64_C(2000000000000000); // max supply: 2000M 
 
 const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX			= 0;
 const size_t   ZAWY_DIFFICULTY_FIX				= 1;
@@ -28,7 +28,7 @@ const uint8_t  ZAWY_DIFFICULTY_BLOCK_VERSION			= 0;
 const size_t   CRYPTONOTE_REWARD_BLOCKS_WINDOW			= 100;
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE	= 100000; // size of block (bytes): after which reward is calculated using block size
 const size_t   CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE		= 600;
-const size_t   CRYPTONOTE_DISPLAY_DECIMAL_POINT			= 8;
+const size_t   CRYPTONOTE_DISPLAY_DECIMAL_POINT			= 10;
 
 // COIN - number of smallest units in one coin
 const uint64_t POINT						= UINT64_C(1000);     // pow(10, 3)
@@ -38,7 +38,7 @@ const uint64_t MINIMUM_FEE_V1					= UINT64_C(100);       // fee increase
 const uint64_t MINIMUM_FEE_BANKING					= UINT64_C(1000);       // fee increase 
 const uint64_t DEFAULT_DUST_THRESHOLD				= UINT64_C(10);       // pow(10, 1)
 
-const uint64_t DIFFICULTY_TARGET				= 140; // seconds = 2.20m
+const uint64_t DIFFICULTY_TARGET				= 120; // seconds = 2.20m
 const uint64_t EXPECTED_NUMBER_OF_BLOCKS_PER_DAY		= 24 * 60 * 60 / DIFFICULTY_TARGET;
 const size_t   DIFFICULTY_WINDOW				= EXPECTED_NUMBER_OF_BLOCKS_PER_DAY; // blocks
 const size_t   DIFFICULTY_WINDOW_V1				= DIFFICULTY_WINDOW;
@@ -114,12 +114,12 @@ const char     MINER_CONFIG_FILE_NAME[]                      	= "miner_conf.json
 } // parameters
 
 const uint64_t START_BLOCK_REWARD				= (UINT64_C(50000) * parameters::POINT); // start reward
-const uint64_t FOUNDATION_TRUST					= (UINT64_C(120000) * parameters::COIN); // locked funds to secure network
-const uint64_t MAX_BLOCK_REWARD					= (UINT64_C(10) * parameters::COIN); // max reward
+const uint64_t FOUNDATION_TRUST					= (UINT64_C(1200000) * parameters::COIN); // locked funds to secure network
+const uint64_t MAX_BLOCK_REWARD					= (UINT64_C(30) * parameters::COIN); // max reward
 const uint64_t REWARD_INCREASE_INTERVAL				= (UINT64_C(22900)); // aprox. 1 month (+ 0.25 increment per month)
 
 const char     CRYPTONOTE_NAME[]                             	= "cryofast";
-const char     GENESIS_COINBASE_TX_HEX[]			= "010a01ff000180ade204029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101f6e1901f737faca9c96f91abd99c29037753d41d3a79d33d202bb70985edb83e";
+const char     GENESIS_COINBASE_TX_HEX[]			= "";
 const uint32_t GENESIS_NONCE                         	        = 10000;
 const uint64_t GENESIS_TIMESTAMP				= 1527078920;
 
