@@ -19,7 +19,7 @@ const uint64_t CRYPTONOTE_DEFAULT_TX_SPENDABLE_AGE		= 10; // 20m unlock
 const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW		= 30;
 const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW_V1		= 11; // LWMA3
 
-const uint64_t MONEY_SUPPLY					= UINT64_C(2000000000000000); // max supply: 2000M 
+const uint64_t MONEY_SUPPLY					= UINT64_C(200000000000000); // max supply: 2000M 
 
 const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX			= 0;
 const size_t   ZAWY_DIFFICULTY_FIX				= 1;
@@ -113,9 +113,9 @@ const char     MINER_CONFIG_FILE_NAME[]                      	= "miner_conf.json
 
 } // parameters
 
-const uint64_t START_BLOCK_REWARD				= (UINT64_C(5000000) * parameters::POINT); // start reward
-const uint64_t FOUNDATION_TRUST					= (UINT64_C(120000000) * parameters::COIN); // locked funds to secure network
-const uint64_t MAX_BLOCK_REWARD					= (UINT64_C(30) * parameters::COIN); // max reward
+const uint64_t START_BLOCK_REWARD				= (UINT64_C(50000000) * parameters::POINT); // start reward
+const uint64_t FOUNDATION_TRUST					= (UINT64_C(400000000) * parameters::COIN); // locked funds to secure network
+const uint64_t MAX_BLOCK_REWARD					= (UINT64_C(20) * parameters::COIN); // max reward
 const uint64_t REWARD_INCREASE_INTERVAL				= (UINT64_C(22900)); // aprox. 1 month (+ 0.25 increment per month)
 
 const char     CRYPTONOTE_NAME[]                             	= "cryofast";
