@@ -12,7 +12,7 @@ const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE			= 500000000;
 const size_t   CRYPTONOTE_MAX_TX_SIZE				= 1000000000;
 const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX		= 0x2756; // addresses start with "cr"
 const size_t   CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW		= 10; // 20m unlock
-const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT		= 60 * 60 * 2; // was 2 hours, not 3 * T
+const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT		= 6 * 6 * 2; // was 2 hours, not 3 * T
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT_V1	= 360; // LWMA3
 const uint64_t CRYPTONOTE_DEFAULT_TX_SPENDABLE_AGE		= 10; // 20m unlock
 
@@ -39,13 +39,13 @@ const uint64_t MINIMUM_FEE_BANKING					= UINT64_C(10000);       // fee increase
 const uint64_t DEFAULT_DUST_THRESHOLD				= UINT64_C(100);       // pow(10, 2)
 
 const uint64_t DIFFICULTY_TARGET				= 120; // seconds = 2.20m
-const uint64_t EXPECTED_NUMBER_OF_BLOCKS_PER_DAY		= 24 * 6 * 6 / DIFFICULTY_TARGET;
+const uint64_t EXPECTED_NUMBER_OF_BLOCKS_PER_DAY		= 24 * 60 * 60 / DIFFICULTY_TARGET;
 const size_t   DIFFICULTY_WINDOW				= EXPECTED_NUMBER_OF_BLOCKS_PER_DAY; // blocks
 const size_t   DIFFICULTY_WINDOW_V1				= DIFFICULTY_WINDOW;
 const size_t   DIFFICULTY_WINDOW_V2				= DIFFICULTY_WINDOW;
-const size_t   DIFFICULTY_WINDOW_V3				= 6; // LWMA3
+const size_t   DIFFICULTY_WINDOW_V3				= 60; // LWMA3
 const size_t   DIFFICULTY_BLOCKS_COUNT			= DIFFICULTY_WINDOW_V3 + 1; // LWMA3
-const size_t   DIFFICULTY_CUT					= 6; // timestamps to cut after sorting
+const size_t   DIFFICULTY_CUT					= 60; // timestamps to cut after sorting
 const size_t   DIFFICULTY_CUT_V1				= DIFFICULTY_CUT;
 const size_t   DIFFICULTY_CUT_V2				= DIFFICULTY_CUT;
 const size_t   DIFFICULTY_LAG					= 15; 
