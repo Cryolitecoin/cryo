@@ -43,16 +43,16 @@ const uint64_t EXPECTED_NUMBER_OF_BLOCKS_PER_DAY		= 2 * 6 * 6 / DIFFICULTY_TARGE
 const size_t   DIFFICULTY_WINDOW				= EXPECTED_NUMBER_OF_BLOCKS_PER_DAY; // blocks
 const size_t   DIFFICULTY_WINDOW_V1				= DIFFICULTY_WINDOW;
 const size_t   DIFFICULTY_WINDOW_V2				= DIFFICULTY_WINDOW;
-const size_t   DIFFICULTY_WINDOW_V3				= 6; // LWMA3
+const size_t   DIFFICULTY_WINDOW_V3				= 60; // LWMA3
 const size_t   DIFFICULTY_BLOCKS_COUNT			= DIFFICULTY_WINDOW_V3 + 1; // LWMA3
-const size_t   DIFFICULTY_CUT					= 6; // timestamps to cut after sorting
+const size_t   DIFFICULTY_CUT					= 60; // timestamps to cut after sorting
 const size_t   DIFFICULTY_CUT_V1				= DIFFICULTY_CUT;
 const size_t   DIFFICULTY_CUT_V2				= DIFFICULTY_CUT;
-const size_t   DIFFICULTY_LAG					= 1; 
+const size_t   DIFFICULTY_LAG					= 15; 
 const size_t   DIFFICULTY_LAG_V1				= DIFFICULTY_LAG;
 const size_t   DIFFICULTY_LAG_V2				= DIFFICULTY_LAG;
 
-static_assert(1 * DIFFICULTY_CUT <= DIFFICULTY_WINDOW - 1, "Bad DIFFICULTY_WINDOW or DIFFICULTY_CUT");
+static_assert(2 * DIFFICULTY_CUT <= DIFFICULTY_WINDOW - 2, "Bad DIFFICULTY_WINDOW or DIFFICULTY_CUT");
 
 const uint64_t DEPOSIT_MIN_AMOUNT				= 1 * COIN; // minimun mmount for a valid deposit
 const uint32_t DEPOSIT_MIN_TERM					= 5; // ~1 week
