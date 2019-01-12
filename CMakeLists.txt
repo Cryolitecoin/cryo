@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8.6)
 
 set(VERSION "0.1")
 # Packaged from main commits
-set(COMMIT b3f1bb4)
+set(COMMIT 11fea52c)
 set(REFS " (HEAD -> master)")
 
 set(CMAKE_CXX_STANDARD 11)
