@@ -11,7 +11,7 @@ const uint64_t CRYPTONOTE_MAX_BLOCK_NUMBER			= 500000000;
 const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE			= 500000000;
 const size_t   CRYPTONOTE_MAX_TX_SIZE				= 1000000000;
 const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX		= 0x2756; // addresses start with "cr"
-const size_t   CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW		= 40; // 20m unlock
+const size_t   CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW		= 10; // 20m unlock
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT		= 60 * 60 * 2; // was 2 hours, not 3 * T
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT_V1	= 360; // LWMA3
 const uint64_t CRYPTONOTE_DEFAULT_TX_SPENDABLE_AGE		= 10; // 20m unlock
@@ -21,7 +21,7 @@ const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW_V1		= 11; // LWMA3
 
 const uint64_t MONEY_SUPPLY					= UINT64_C(200000000000000000); // max supply: 2000M 
 
-const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX			= 30;
+const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX			= 0;
 const size_t   ZAWY_DIFFICULTY_FIX				= 1;
 const uint8_t  ZAWY_DIFFICULTY_BLOCK_VERSION			= 0;
 
@@ -38,19 +38,19 @@ const uint64_t MINIMUM_FEE_V1					= UINT64_C(1000);       // fee increase
 const uint64_t MINIMUM_FEE_BANKING					= UINT64_C(10000);       // fee increase 
 const uint64_t DEFAULT_DUST_THRESHOLD				= UINT64_C(100);       // pow(10, 2)
 
-const uint64_t DIFFICULTY_TARGET				= 30; // seconds = 2.20m
+const uint64_t DIFFICULTY_TARGET				= 120; // seconds = 2.20m
 const uint64_t EXPECTED_NUMBER_OF_BLOCKS_PER_DAY		= 24 * 60 * 60 / DIFFICULTY_TARGET;
-const size_t   DIFFICULTY_WINDOW				= 17; // blocks
-const size_t   DIFFICULTY_WINDOW_V1				= 2880;
-const size_t   DIFFICULTY_WINDOW_V2				= 2880;
+const size_t   DIFFICULTY_WINDOW				= EXPECTED_NUMBER_OF_BLOCKS_PER_DAY; // blocks
+const size_t   DIFFICULTY_WINDOW_V1				= DIFFICULTY_WINDOW;
+const size_t   DIFFICULTY_WINDOW_V2				= DIFFICULTY_WINDOW;
 const size_t   DIFFICULTY_WINDOW_V3				= 60; // LWMA3
 const size_t   DIFFICULTY_BLOCKS_COUNT			= DIFFICULTY_WINDOW_V3 + 1; // LWMA3
-const size_t   DIFFICULTY_CUT					= 0; // timestamps to cut after sorting
-const size_t   DIFFICULTY_CUT_V1				= 60;
-const size_t   DIFFICULTY_CUT_V2				= 60;
-const size_t   DIFFICULTY_LAG					= 0; 
-const size_t   DIFFICULTY_LAG_V1				= 15;
-const size_t   DIFFICULTY_LAG_V2				= 15;
+const size_t   DIFFICULTY_CUT					= 60; // timestamps to cut after sorting
+const size_t   DIFFICULTY_CUT_V1				= DIFFICULTY_CUT;
+const size_t   DIFFICULTY_CUT_V2				= DIFFICULTY_CUT;
+const size_t   DIFFICULTY_LAG					= 15; 
+const size_t   DIFFICULTY_LAG_V1				= DIFFICULTY_LAG;
+const size_t   DIFFICULTY_LAG_V2				= DIFFICULTY_LAG;
 
 static_assert(2 * DIFFICULTY_CUT <= DIFFICULTY_WINDOW - 2, "Bad DIFFICULTY_WINDOW or DIFFICULTY_CUT");
 
@@ -68,9 +68,9 @@ static_assert(DEPOSIT_MIN_TERM * DEPOSIT_MAX_TOTAL_RATE > DEPOSIT_MIN_TOTAL_RATE
 const uint64_t MULTIPLIER_FACTOR				= 100;
 const uint32_t END_MULTIPLIER_BLOCK				= 12750;
 
-const size_t   MAX_BLOCK_SIZE_INITIAL				= 100000;
+const size_t   MAX_BLOCK_SIZE_INITIAL				= CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE * 10;
 const uint64_t MAX_BLOCK_SIZE_GROWTH_SPEED_NUMERATOR		= 100 * 1024;
-const uint64_t MAX_BLOCK_SIZE_GROWTH_SPEED_DENOMINATOR		= 2 * 6 * 6 / DIFFICULTY_TARGET;
+const uint64_t MAX_BLOCK_SIZE_GROWTH_SPEED_DENOMINATOR		= 365 * 24 * 60 * 60 / DIFFICULTY_TARGET;
 
 const uint64_t CRYPTONOTE_LOCKED_TX_ALLOWED_DELTA_BLOCKS	= 1;
 const uint64_t CRYPTONOTE_LOCKED_TX_ALLOWED_DELTA_SECONDS	= DIFFICULTY_TARGET * CRYPTONOTE_LOCKED_TX_ALLOWED_DELTA_BLOCKS;
@@ -119,7 +119,7 @@ const uint64_t MAX_BLOCK_REWARD					= (UINT64_C(200000000) * parameters::COIN); 
 const uint64_t REWARD_INCREASE_INTERVAL				= (UINT64_C(22900)); // aprox. 1 month (+ 0.25 increment per month)
 
 const char     CRYPTONOTE_NAME[]                             	= "cryofast";
-const char     GENESIS_COINBASE_TX_HEX[]			= "012801ff000180a0b787e905029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd08807121018214b8349dc905bdace2c88a2a4a716861aac4e4ec9fbcad4e7afb99f1e1ba4f";
+const char     GENESIS_COINBASE_TX_HEX[]			= "010a01ff000180a0b787e905029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101b1a8584df4053ac687ee2651f31ec19a9273a27539f7c03c2ca996cfda1421ca";
 const uint32_t GENESIS_NONCE                         	        = 10000;
 const uint64_t GENESIS_TIMESTAMP				= 1527078920;
 
