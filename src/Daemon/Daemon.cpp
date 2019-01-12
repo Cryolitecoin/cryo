@@ -1,6 +1,7 @@
 // Copyright (c) 2011-2017 The Cryptonote developers
 // Copyright (c) 2016-2018, The Karbo developers
 // Copyright (c) 2018 The Circle Foundation
+// Copyright (c) 2019 The Cryo Network
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -104,7 +105,7 @@ void print_genesis_tx_hex() {
  //	CryptoNote::BinaryArray txb = CryptoNote::toBinaryArray(tx);
  //	std::string tx_hex = Common::toHex(txb);
 
- //	std::cout << "Modify this line into your concealX configuration file as is:  " << std::endl;
+ //	std::cout << "Modify this line into your cryo configuration file as is:  " << std::endl;
  //	std::cout << "const char GENESIS_COINBASE_TX_HEX[] = \"" << tx_hex << "\";" << std::endl;
 //   }
 //   return;
@@ -130,21 +131,21 @@ JsonValue buildLoggerConfiguration(Level level, const std::string& logfile) {
 }
 
 void renameDataDir() {
-  std::string concealXDir = Tools::getDefaultDataDirectory();
-  boost::filesystem::path concealXDirPath(concealXDir);
-  if (boost::filesystem::exists(concealXDirPath)) {
+  std::string cryoDir = Tools::getDefaultDataDirectory();
+  boost::filesystem::path cryoDirPath(cryoDir);
+  if (boost::filesystem::exists(cryoDirPath)) {
     return;
   }
 
-  std::string dataDirPrefix = concealXDir.substr(0, concealXDir.size() + 1 - sizeof(CRYPTONOTE_NAME));
+  std::string dataDirPrefix = cryoDir.substr(0, cryoDir.size() + 1 - sizeof(CRYPTONOTE_NAME));
   boost::filesystem::path cediDirPath(dataDirPrefix + "BXC");
 
   if (boost::filesystem::exists(cediDirPath)) {
-    boost::filesystem::rename(cediDirPath, concealXDirPath);
+    boost::filesystem::rename(cediDirPath, cryoDirPath);
   } else {
     boost::filesystem::path BcediDirPath(dataDirPrefix + "Bcedi");
     if (boost::filesystem::exists(boost::filesystem::path(BcediDirPath))) {
-		boost::filesystem::rename(BcediDirPath, concealXDirPath);
+		boost::filesystem::rename(BcediDirPath, cryoDirPath);
     }
   }
 }

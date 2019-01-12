@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8.6)
 
 set(VERSION "0.1")
 # Packaged from main commits
-set(COMMIT 72946d9)
+set(COMMIT b3f1bb4)
 set(REFS " (HEAD -> master)")
 
 set(CMAKE_CXX_STANDARD 11)
@@ -17,7 +17,7 @@ enable_testing()
 # copy CTestCustom.cmake to build dir to disable long running tests in 'make test'
 configure_file(${CMAKE_SOURCE_DIR}/CTestCustom.cmake ${CMAKE_BINARY_DIR})
 
-project(concealX)
+project(CryoNetwork)
 
 include_directories(include src external "${CMAKE_BINARY_DIR}/version")
 if(APPLE)

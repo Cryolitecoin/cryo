@@ -1,5 +1,6 @@
 // Copyright (c) 2011-2017 The Cryptonote developers
 // Copyright (c) 2018 The Circle Foundation
+// Copyright (c) 2019 The Cryo Network
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -530,7 +531,7 @@ bool CryptoNoteProtocolHandler::on_connection_synchronized() {
       << "    %@@@@@@@  @@@@@@@@@@  .@@(  @@@@,  @@@@@@@  @@@@@@@@ .@@@   @@@. @@@@@@@@#  " << ENDL
       << "      @@@@@@    @@@@@@(   .@@(   @@@,    @@@@@  @@@@@@@@ @@@    (@@@ @@@@@@@@#  " << ENDL
       << "  " << ENDL
-      << "You are now synchronized with the Conceal network. You may now start concealwallet." << ENDL
+      << "You are now synchronized with the Cryo network. You may now start cryopocket." << ENDL
       << "Please note, that the blockchain will be saved only after you quit the daemon" << ENDL
       << "with the \"exit\" command or if you use the \"save\" command." << ENDL
       << "Otherwise, you will possibly need to synchronize the blockchain again." << ENDL
